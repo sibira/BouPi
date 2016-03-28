@@ -8,10 +8,10 @@ RaspberryPi3で防犯カメラ
 
 ## 他に必要なもの
 
-・motion構築
-・カメラ認識
-・スピーカーで音声再生
-・AquesTalkPiインストール
+・motion構築  
+・カメラ認識  
+・スピーカーで音声再生  
+・AquesTalkPiインストール  
 
 ## ライセンス
 
