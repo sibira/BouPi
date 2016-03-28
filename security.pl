@@ -12,8 +12,8 @@ use warnings;
 use File::stat;
 my $aquestalkpi = '/z-data/aquestalkpi/AquesTalkPi -s 70';	#AquesTalkPiのディレクトリとオプション指定
 my $targetdir = '/motion';	#キャプチャ画像があるディレクトリ
-my $my_no = '10:0E:2B:12:20:C0';	#Bluetoothデバイス
-my $expiretime = 60*60*24*7;	#一週間
+my $my_no = 'aa:bb:cc:dd:ee:ff';	#Bluetoothデバイス
+my $expiretime = 60*60*24*7;	#画像を保存する期間：一週間
 my $vol_aq = 50;
 my $blue_count = 0;
 my $imgdel_count = 0;
