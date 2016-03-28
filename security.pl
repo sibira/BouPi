@@ -38,7 +38,7 @@ while (1) {
 				}
 			}
 			system("sudo service motion stop > /dev/null 2>&1");
-			system("amixer set PCM $vol_aq\% > /dev/null 2>&1 ; $aquestalkpi '防犯システムを解除しました。おかえりなさいませー。' | aplay > /dev/null 2>&1 ; sleep 1");
+			system("amixer set PCM $vol_aq\% > /dev/null 2>&1 ; $aquestalkpi '監視システムを解除しました。おかえりなさいませー。' | aplay > /dev/null 2>&1 ; sleep 1");
 			if ( $file_count ) {
 				system("amixer set PCM $vol_aq\% > /dev/null 2>&1 ; $aquestalkpi '$file_count件の画像がありました。' | aplay > /dev/null 2>&1");
 			} else {
@@ -52,7 +52,7 @@ while (1) {
 		$blue_count++;
 		if ( $blue_count > 2 ) {
 			system("sudo service motion start > /dev/null 2>&1");
-			system("amixer set PCM $vol_aq\% > /dev/null 2>&1 ; $aquestalkpi '防犯システムを有効にしましたー。' | aplay > /dev/null 2>&1");
+			system("amixer set PCM $vol_aq\% > /dev/null 2>&1 ; $aquestalkpi '監視システムを有効にしましたー。' | aplay > /dev/null 2>&1");
 			$unix_time = time();
 			$file_count = 0;
 		}
