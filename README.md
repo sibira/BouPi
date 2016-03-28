@@ -1,7 +1,7 @@
 PiTime
 ====
 
-RaspberryPi3で防犯カメラ
+RaspberryPi3で監視カメラ
 
 ## システム概要
 ![pic](./image.gif)
