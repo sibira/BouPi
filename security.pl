@@ -10,11 +10,12 @@
 use strict;	
 use warnings;
 use File::stat;
+#変数宣言
 my $aquestalkpi = '/aquestalkpi/AquesTalkPi -s 70';	#AquesTalkPiのディレクトリとオプション指定
 my $targetdir = '/motion';	#キャプチャ画像があるディレクトリ
 my $my_no = 'aa:bb:cc:dd:ee:ff';	#Bluetoothデバイス
 my $expiretime = 60*60*24*7;	#画像を保存する期間：一週間
-my $vol_aq = 50;
+my $vol_aq = 50;	#音声再生時のボリューム
 my $blue_count = 0;
 my $imgdel_count = 0;
 my $file_count = 0;
@@ -22,6 +23,7 @@ my $blue_status;
 my $motion_status;
 my $now;
 my $unix_time;
+#ループ
 while (1) {
 	sleep(60);
 	$blue_status = `/usr/bin/sudo /usr/bin/hcitool info $my_no 2>&1 | /bin/grep Device`;
