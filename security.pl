@@ -28,7 +28,7 @@ while (1) {
 	sleep(60);
 	$blue_status = `/usr/bin/sudo /usr/bin/hcitool info $my_no 2>&1 | /bin/grep Device`;
 	$motion_status = `/usr/bin/pgrep motion`;
-	#Enable
+	#対象機器があった場合
 	if ( $blue_status ) {
 		$blue_count = 0;
 		if ( $motion_status ) {
@@ -49,7 +49,7 @@ while (1) {
 
 		}
 	}
-	#Disable
+	#対象機器が3分間なかった場合
 	if ( ! $blue_status and ! $motion_status ) {
 		$blue_count++;
 		if ( $blue_count > 2 ) {
@@ -59,7 +59,7 @@ while (1) {
 			$file_count = 0;
 		}
 	}
-	#img-delete (10分毎)
+	#過去の画像削除 (10分毎)
 	$imgdel_count++;
 	if ( $imgdel_count > 10 ) {
 		$now = time;
